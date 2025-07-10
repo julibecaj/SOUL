@@ -1,4 +1,38 @@
-title{
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #c2d1e0;
+    color: #333;
+}
+
+
+
+.title{
     text-align: center;
+    margin-top: 30px; /* optional: add spacing from the top */
+    background: #223a5f;
+    color:lightcyan;
+    border-radius: 15px;
+    padding: 5px px; /*play whith this two*/
+    margin: 0 8px;
+}
+
+.information{
     
+}
+
+.user{
+
+}
+
+.top-artists{
+
+}
+
+.my-albums{
+
+}
+
+.my-songs{
+
 }

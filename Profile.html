@@ -5,36 +5,81 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="Profile.css">
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <header>
+            <div class="logo">
+                <img src="images/MUSIC LOGO.png" alt="SOUL Logo" class="navbar-logo">
+                SOUL
+            </div>
+            <div class="header-center">
+            
+                <nav>
+                    <a href="#">Home</a>
+                    <a href="Music.html">Music</a>
+                    <a href="Playlist.html">Playlist</a>
+                    <a href="Podcasts.html">Podcast</a>
+                    <a href="Albums.html">Albums</a>
+                </nav>
+                <div class="search-container">
+                    <input type="text" placeholder="Search"/>
+                </div>
+            </div>
+            <div class="profile">
+                <button class="menu-button" onclick="toggleMenu()">
+                    👤
+                </button>
+                <ul class="dropdown-menu" id="dropdown-menu">
+                    <li><a href="Profile.html">Profile</a></li>
+                    <li><a href="Music.html">Music</a></li>
+                    <li><a href="Albums.html">Albums</a></li>
+                </ul>
+            </div>
+        </header>
         
-        
+        <!--fix the nav bar...-->
+
         <div class="title">
             <h1>WELCOME TO YOUR SOUL - <!--get username--></h1>
         </div>
        
-        <div class="infromation">
-            <h2>My infromation</h2>
-            <ul class="user">
-                <li>Username:</li>
-                <li>Name:</li>
-                <li>Surname:</li>
-                <li>Email:</li>
-            </ul>
-        </div> 
-        
-        <div class="top-artists">
-            <h2>My Top Artists</h2>
-        </div>
-        
-        <div class="my-albums">
-            <h2>My Albums</h2>
-        </div>
-            
-        <div class="my-songs">
-            <h2>Your go to songs</h2>
+        <div class="profile-content">
+            <div class="information-box">
+                <h2>My information</h2>
+                <ul class="user-info">
+                    <li>Username:</li>
+                    <li>Name:</li>
+                    <li>Surname:</li>
+                    <li>Email:</li>
+                </ul>
+            </div>
+            <div class="profile-details">
+                <div class="top-artists">
+                    <h2>My Top Artists</h2>
+                </div>
+                <div class="my-albums">
+                    <h2>My Albums</h2>
+                </div>
+                <div class="my-songs">
+                    <h2>Your go to songs</h2>
+                </div>
+            </div>
         </div>
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <script src="script.js"></script>
+        
     </body>
 </html>

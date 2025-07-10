@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #c2d1e0;
+    color: #333;
+    /*add the font of text*/
+}
+
+header {
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 30px;
+}
+
+.navbar-logo{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.header-center {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    flex: 1;
+    justify-content: center;
+    min-width: 200px;      /* Make search bar area wider */
+    max-width: 400px;
+}
+
+.search-container input {
+    padding: 7px 12px;
+    border-radius: 7px;
+    border: none;
+    width: 100%;           /* Fill the container */
+    font-size: 1rem;
+}
+/*butoni ke mavbari...*/
+.profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    z-index: 101; /* Add this */
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;     /* Smaller icon */
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%; /* Show below the button */
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+    min-width: 120px;
+    z-index: 102; /* Make sure it's above other elements */
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background: #f0f0f0;
+}
+/*butoni ne navbar...^^^*/
+
+main {
+    text-align: center;
+    padding: 20px;
+    position: relative; /* ensure .background-text is positioned relative to main */
+    z-index: 1;
+}
+
+.features {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;                   /* Space between feature items */
+    margin-bottom: 30px;
+}
+
+.feature-item {
+    background: #223a5f;         /* Dark blue background */
+    color: #fff;
+    border-radius: 15px;         /* Rounded corners */
+    padding: 10px 18px;      /* Reduced padding for a smaller box */
+    margin: 0 8px;           /* Slightly less margin */
+    min-width: 140px;        /* Smaller minimum width */
+    max-width: 200px;        /* Smaller maximum width */
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Optional: subtle shadow */
+    display: inline-block;       /* Keeps the pill shape */
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 1.5s ease-in-out;
+  min-width: calc(6 * 33.33%); /* 6 cards × 33.33% each = 200% of parent */
+}
+
+.artist-card {
+  flex: 0 0 33.33%;
+  text-align: center;
+  padding: 10px;
+}
+
+.artist-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #102040;
+}
+
+
+
+.tagline {
+    margin-top: 40px;
+    font-style: italic;
+}
+
+#test
+
+.tagline-svg {
+  display: block;
+  margin: 0 auto;
+}
+.tagline-svg text {
+  font-size: 1.5rem;
+  fill: #333;
+  font-family: inherit;
+}
+
+.background-text {
+    position: absolute;
+    top: 120px; /* adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12vw; /* responsive size */
+    color: #223a5f;
+    opacity: 0.08;
+    font-family: 'Segoe Script', 'Brush Script MT', cursive, sans-serif;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+    white-space: nowrap;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    .header-center {
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .search-container {
+        min-width: 120px;
+        max-width: 200px;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    .logo {
+        margin: 0 auto 10px auto;
+        text-align: center;
+    }
+    .header-center {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .profile {
+        justify-content: flex-end;
+        margin: 0 10px 10px 0;
+    }
+}

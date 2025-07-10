@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--fix the logo-->
+    <link rel="icon" href="images/MUSIC LOGO.png" type="image/png">
+    <title>SOUL</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/MUSIC LOGO.png" alt="SOUL Logo" class="navbar-logo">
+            SOUL
+        </div>
+        <div class="header-center">
+            
+            <nav>
+                <a href="#">Home</a>
+                <a href="Music.html">Music</a>
+                <a href="Playlist.html">Playlist</a>
+                <a href="Podcasts.html">Podcast</a>
+                <a href="Albums.html">Albums</a>
+            </nav>
+            <div class="search-container">
+                <input type="text" placeholder="Search"/>
+            </div>
+        </div>
+        <div class="profile">
+            <button class="menu-button" onclick="toggleMenu()">
+                👤
+            </button>
+            <ul class="dropdown-menu" id="dropdown-menu">
+                <li><a href="Profile.html">Profile</a></li>
+                <li><a href="Music.html">Music</a></li>
+                <li><a href="Albums.html">Albums</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!--FIX THE BACKGROUND-->
+        <div class="background-text">Soul</div>
+        <!--buttonat do kthehen ne banners text-->
+        <h1>Welcome to SOUL</h1> <!--at the very top in the middle-->
+        
+        <div class="features">
+            <div class="feature-item">
+                <h5>Find your favourite artist and more!</h5>
+            </div>
+            <div class="feature-item">
+                <h5>Daily personalized playlist just for you!</h5>
+            </div>
+            <div class="feature-item">
+                <h5>Create and share albums with other souls!</h5>
+            </div>
+        </div>
+
+ <!--Artisat-->
+<!--Artistat do shfaqen nga 3 and continue-->
+    <div class="carousel">
+            
+            <div class="carousel-track">
+                
+                <div class="artist-card">
+                    <img src="images/travisscott.jpg" alt="Travis Scott"/>
+                    <p>Travis Scott</p>
+                </div>
+
+                <div class="artist-card">
+                    <img src="images/billieeilish.jpg" alt="Billie Eilish"/>
+                    <p>Billie Eilish</p>
+                </div>
+
+                <div class="artist-card">
+                    <img src="images/theweekend.jpg" alt="The Weekend"/>
+                    <p>The Weekend</p>
+                </div>
+
+                <div class="artist-card">
+                    <img src="images/drake.jpg" alt="Drake"/>
+                    <p>Drake</p>
+                </div>
+
+                <div class="artist-card">
+                    <img src="images/arianagrande.jpg" alt="Ariana Grande"/>
+                    <p>Ariana Grande</p>
+                </div>
+
+                <div class="artist-card">
+                    <img src="images/edsheeran.jpg" alt="Ed Sheeran"/>
+                    <p>Ed Sheeran</p>
+                </div>
+                <!-- Add more artist cards as needed -->
+            </div>
+            
+        </div>
+        
+        
+        <!--SMTH TO LOG IN OR SIGN UP-->
+
+        
+        
+        <!--texti curved-->
+        
+        <!--test-->
+        <svg width="500" height="100" viewBox="0 0 500 100" class="tagline-svg">
+            <path id="curve" d="M50,80 Q250,10 450,80" fill="transparent"/>
+            <text width="500">
+                <textPath href="#curve" startOffset="50%" text-anchor="middle" dominant-baseline="middle">
+                    Where every beat touches your soul.
+                </textPath>
+            </text>
+        </svg>
+    </main>
+
+    
+    
+    
+    
+    
+    <script src="script.js"></script>
+
+
+
+
+</body>
+</html>

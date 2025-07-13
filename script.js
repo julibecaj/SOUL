@@ -34,3 +34,45 @@ document.addEventListener('click', function(event) {
 //playlist
 //albums
 //podcasts
+
+
+
+//live feed...
+//smth wrong here?!?!
+window.onload = function () {
+    document.addEventListener("DOMContentLoaded", function () {
+        let users = 238;
+        let signups = 5200;
+        let listening = 108;
+
+        function animateCount(id, target) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            let current = parseInt(el.innerText);
+            let step = Math.ceil((target - current) / 10);
+            if (step === 0) step = 1;
+
+            let interval = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(interval);
+                }
+                el.innerText = current;
+            }, 50);
+        }
+
+        function updateStats() {
+            users += Math.floor(Math.random() * 5);
+            signups += Math.floor(Math.random() * 3);
+            listening += Math.floor(Math.random() * 4);
+
+            animateCount("users-online", users);
+            animateCount("signups", signups);
+            animateCount("listening", listening);
+        }
+
+        updateStats(); // Trigger once on load
+        setInterval(updateStats, 3000);
+    });
+}

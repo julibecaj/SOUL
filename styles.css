@@ -214,13 +214,22 @@ body {
   height: 100vh;
 }
 */
+
+
 .live-feed-box {
-  background: #1f1f1f;
-  border-radius: 20px;
-  padding: 30px 40px;
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
-  text-align: center;
-  max-width: 400px;
+    background: #223a5f;
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(34,58,95,0.08);
+    padding: 28px 38px;
+    margin: 32px auto;
+    max-width: 340px;
+    text-align: center;
+    font-family: inherit;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .live-feed-box h2 {
@@ -230,8 +239,9 @@ body {
 }
 
 .stat {
-  margin: 15px 0;
-  font-size: 22px;
+  margin: 8px 0;
+  font-size: 1.08rem;
+  font-weight: 500;
 }
 
 .stat span {

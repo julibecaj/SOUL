@@ -13,7 +13,7 @@ setInterval(() => {
 
 //homepage soul
 // Initialize the button in navbar
-showCard(currentIndex);
+showCard(currentIndex);  //it shows me an error here but idk
 
 function toggleMenu() {
     const menu = document.getElementById('dropdown-menu');

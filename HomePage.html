@@ -103,18 +103,18 @@
         <!--SMTH TO LOG IN OR SIGN UP-->
         <div class="fetching-user">
             STILL NOT BEING ONE WITH SOUL?
-            <button class="login-bttn" onclick="open" href="LogIn.html">Log In</button>
-            <button class="signup-bttn" onclick="open" href="Register.html">Sign Up</button>
+            <button class="login-bttn" onclick="location.href='LogIn.html'">Log In</button>
+            <button class="signup-bttn" onclick="location.href='Register.html'">Sign Up</button>
         </div>
 
         
         <!--live feed of people using soul, signed in to soul, listening in soul-->
-        <div class="live-feed-box">
-            <h2>🎶 SOUL Live Feed</h2>
-            <div class="stat">👥 Users Online: <span id="users-online">0</span></div>
-            <div class="stat">📝 Total Signups: <span id="signups">0</span></div>
-            <div class="stat">🎧 Now Listening: <span id="listening">0</span></div>
+        <div id="live-feed" class="live-feed-box">
+            <div class="stat">👥 Users Online: <span id="users-online" class="number">0</span></div>
+            <div class="stat">📝 Registered Users: <span id="users-registered" class="number">0</span></div>
+            <div class="stat">🎧 Listening Now: <span id="listening-now" class="number">0</span></div>
         </div>
+
         
         
         

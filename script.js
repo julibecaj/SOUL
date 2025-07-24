@@ -39,40 +39,25 @@ document.addEventListener('click', function(event) {
 
 //live feed...
 //smth wrong here?!?! isnt working
-window.onload = function () {
-    document.addEventListener("DOMContentLoaded", function () {
-        let users = 238;
-        let signups = 5200;
-        let listening = 108;
 
-        function animateCount(id, target) {
-            const el = document.getElementById(id);
-            if (!el) return;
-            let current = parseInt(el.innerText);
-            let step = Math.ceil((target - current) / 10);
-            if (step === 0) step = 1;
+document.addEventListener('DOMContentLoaded', function () {
+    fakeCountUp('users-online', 0, 120, 3);
+    fakeCountUp('users-registered', 1000, 6000, 50);
+    fakeCountUp('listening-now', 0, 90, 2);
+});
 
-            let interval = setInterval(() => {
-                current += step;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(interval);
-                }
-                el.innerText = current;
-            }, 50);
+function fakeCountUp(id, start, max, step) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    let current = start;
+
+    function update() {
+        current += Math.floor(Math.random() * step) + 1;
+        if (current > max) current = max;
+        el.textContent = current.toLocaleString();
+        if (current < max) {
+            setTimeout(update, 500 + Math.random() * 500);
         }
-
-        function updateStats() {
-            users += Math.floor(Math.random() * 5);
-            signups += Math.floor(Math.random() * 3);
-            listening += Math.floor(Math.random() * 4);
-
-            animateCount("users-online", users);
-            animateCount("signups", signups);
-            animateCount("listening", listening);
-        }
-
-        updateStats(); // Trigger once on load
-        setInterval(updateStats, 3000);
-    });
+    }
+    update();
 }

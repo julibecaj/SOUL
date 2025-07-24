@@ -1,0 +1,90 @@
+.register-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 32px 28px;
+    background-color: #223a5f;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(34,58,95,0.08);
+    text-align: center;
+    color: #fff;
+    border: none;
+}
+
+.register-title {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 16px;
+    color: #c2d1e0;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #365b6d;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background: #f2f1ec;
+    color: #223a5f;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    border-color: #fff;
+    outline: none;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    color: #c2d1e0;
+    justify-content: flex-start;
+    margin-top: 14px;
+    margin-bottom: 8px;
+    padding-left: 2px;
+}
+
+.remember-me input[type="checkbox"] {
+    accent-color: #365b6d;
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+.register-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #365b6d;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 18px;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(34,58,95,0.08);
+}
+
+.register-button:hover {
+    background-color: #223a5f;
+}

@@ -38,7 +38,7 @@ document.addEventListener('click', function(event) {
 
 
 //live feed...
-//smth wrong here?!?!
+//smth wrong here?!?! isnt working
 window.onload = function () {
     document.addEventListener("DOMContentLoaded", function () {
         let users = 238;

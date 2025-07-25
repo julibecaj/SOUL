@@ -61,3 +61,39 @@ function fakeCountUp(id, start, max, step) {
     }
     update();
 }
+
+//corusel
+document.addEventListener('DOMContentLoaded', function () {
+    const track = document.querySelector('.carousel-track');
+    const cards = Array.from(document.querySelectorAll('.artist-card'));
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    const cardsPerSlide = 3;
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        const cardWidth = cards[0].offsetWidth + 40; // 40px is the gap
+        track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex >= cards.length - cardsPerSlide;
+    }
+
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex -= cardsPerSlide;
+            if (currentIndex < 0) currentIndex = 0;
+            updateCarousel();
+        }
+    });
+
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex < cards.length - cardsPerSlide) {
+            currentIndex += cardsPerSlide;
+            if (currentIndex > cards.length - cardsPerSlide) currentIndex = cards.length - cardsPerSlide;
+            updateCarousel();
+        }
+    });
+
+    window.addEventListener('resize', updateCarousel);
+    updateCarousel();
+});

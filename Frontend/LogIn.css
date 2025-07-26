@@ -104,3 +104,36 @@ input:focus {
 .signup-button:hover {
     background-color: #365b6d;
 }
+
+/*animation*/
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 48px;
+    background: #182a45;
+}
+
+.left-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 360px;
+    padding: 24px 0;
+}
+
+@media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+        gap: 24px;
+        min-height: unset;
+        padding: 32px 0;
+    }
+    .left-panel {
+        min-width: unset;
+        padding: 0;
+    }
+}
